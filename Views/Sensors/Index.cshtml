@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Sensors";
+}
+<h1>Sensors</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Sensor Id</th>
+            <th>Device Id</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Readings</th>
+            <th>Status</th>
+            <th>Last Updated</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var sensor in Model)
+        {
+            <tr>
+                <td>@sensor.SensorId</td>
+                <td>@sensor.DeviceId</td>
+                <td>@sensor.Name</td>
+                <td>@sensor.Location</td>
+                <td>@sensor.Readings</td>
+                <td>@sensor.Status</td>
+                <td>@sensor.LastUpdated</td>
+
+            </tr>
+        }
+    </tbody>
+</table>

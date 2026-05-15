@@ -1,0 +1,29 @@
+﻿@model Snape_Lite.Models.Sensors
+@{
+    ViewData["Title"] = "Delete Sensors";
+}
+<style>
+    body{
+        background-color:lavenderblush;
+    }
+</style>
+
+<h2>@ViewData["Title"]</h2>
+<h4>Are you sure wants to delete the sensor ?</h4>
+
+<div>
+    <p>Sensor Id <b>@Model.SensorId</b></p>
+    <p>Device Id <b>@Model.DeviceId</b></p>
+    <p>Name <b>@Model.Name</b></p>
+    <p>Location <b>@Model.Location</b></p>
+    <p>Readings <b>@Model.Readings</b></p>
+    <p>Status <b>@Model.Status</b></p>
+    <p>Last Updated <b>@Model.LastUpdated </b></p>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="SensorId" />
+
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+</form>

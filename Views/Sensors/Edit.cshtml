@@ -1,0 +1,51 @@
+﻿@model Snape_Lite.Models.Sensors
+
+@{
+    ViewData["Title"] = "Edit Sensor";
+}
+<style>
+    body{
+        background-color:lavenderblush;
+    }
+</style>
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="SensorId" />
+
+    <div>
+        <label>DeviceId</label>
+        <input asp-for="DeviceId" class="form-control" />
+    </div>
+
+    <div>
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div>
+        <label>Location</label>
+        <input asp-for="Location" class="form-control" />
+    </div>
+
+    <div>
+        <label>Readings</label>
+        <input asp-for="Readings" class="form-control" />
+    </div>
+
+    <div>
+        <label>Status</label>
+        <input asp-for="Status" class="form-control" />
+    </div>
+
+    <div>
+        <label>Last Updated</label>
+        <input asp-for="LastUpdated" class="form-control" readonly />
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index">Back</a>
+</form>
